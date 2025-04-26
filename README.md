@@ -13,7 +13,7 @@
 -**Containerization**: Docker
 
 ## Project Structure
-\\\
+
 .
 ├── backend
 │   ├── Dockerfile
@@ -29,7 +29,25 @@
     ├── Dockerfile
     ├── frontend.py
     └── requirements.txt
-\\\
+
+# Project tree
+
+.
+ * [frontend](./frontend)
+   * [Dockerfile](./frontend/Dockerfile)
+   * [requirements.txt](./frontend/requirements.txt)
+   * [frontend.py](./frontend/frontend.py)
+ * [backend](./backend)
+   * [requirements.txt](./backend/requirements.txt)
+   * [__pycache__](./backend/__pycache__)
+     * [test.cpython-310.pyc](./backend/__pycache__/test.cpython-310.pyc)
+     * [redis_client.cpython-310.pyc](./backend/__pycache__/redis_client.cpython-310.pyc)
+     * [main.cpython-310.pyc](./backend/__pycache__/main.cpython-310.pyc)
+   * [Dockerfile](./backend/Dockerfile)
+   * [redis_client.py](./backend/redis_client.py)
+   * [main.py](./backend/main.py)
+ * [docker-compose.yml](./docker-compose.yml)
+
 ## Set up Instructions
 1. `git clone https://github.com/Eros483/arnab-mandal-wasserstoff-AiInternTask.git`
 2. `cd arnab-mandal-wasserstoff-AiInternTask`
