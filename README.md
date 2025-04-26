@@ -29,7 +29,7 @@
     ├── Dockerfile
     ├── frontend.py
     └── requirements.txt
-
+\\\
 ## Set up Instructions
 1. `git clone https://github.com/Eros483/arnab-mandal-wasserstoff-AiInternTask.git`
 2. `cd arnab-mandal-wasserstoff-AiInternTask`
