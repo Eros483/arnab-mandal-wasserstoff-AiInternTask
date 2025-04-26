@@ -8,11 +8,8 @@
 ## Tech Stack
 -**Frontend**: Streamlit   
 -**Backend**: FastAPI (Python)  
-
 -**LLM**: Gemini   
-
 -**Database**: Redis  
-
 -**Containerization**: Docker   
 
 
