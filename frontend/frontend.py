@@ -28,6 +28,7 @@ st.session_state.user_id=user_id
 backend_url="http://backend:8000"
 #backend_url="http://app:8000"
 
+#function to make it rain confetti as instructed
 def rain_cheers():
     rain(
         emoji="🎊",
@@ -78,7 +79,7 @@ if submit and guess:
 
     else:
         st.error("Something went wrong.")
-
+#to remove all previous queries, and start a new game session
 if st.button("Reset Game"):
     reset_game()
     st.rerun()
