@@ -1,18 +1,18 @@
-#What beats Rock?
+# What beats Rock?
 
 **Empowering the classic what-beats-rock game with Generative AI, build with FastAPI, Redis and Docker**
 
-#Overview
+# Overview
 "What-beats-rock" is an AI enhanced word game, where users attempt to beat rock in a conceptual or metaphorical sense. This is then evaluated by the genAI backend, providing AI-generated feedback, in a serious or cheery tone as chosen by user.
 
-##Tech Stack
+## Tech Stack
 -**Frontend**: Streamlit
 -**Backend**: FastAPI (Python)
 -**LLM**: Gemini
 -**Database**: Redis
 -**Containerization**: Docker
 
-##Project Structure
+## Project Structure
 what-beats-rock/
 ├── backend/
 │   ├── main.py              # FastAPI powered app
@@ -28,7 +28,7 @@ what-beats-rock/
 ├── .env                     #Stores gemini API key
 └── README.md                #Documentation
 
-##Set up Instructions
+## Set up Instructions
 1. `git clone https://github.com/Eros483/arnab-mandal-wasserstoff-AiInternTask.git`
 2. `cd arnab-mandal-wasserstoff-AiInternTask`
 3. `docker-compose up --build`
