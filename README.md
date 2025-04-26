@@ -13,21 +13,24 @@
 -**Containerization**: Docker
 
 ## Project Structure
-\\\what-beats-rock/
-├── backend/
-│   ├── main.py              # FastAPI powered app
-│   ├── requirements.txt     # backend dependencies
-│   ├── Dockerfile           # Dockerfile for backend service
-│   └── __pycache__/         
-├── frontend/
-│   ├── requirements.txt     # dependencies for frontend
-│   ├── frontend.py          # streamlit UI to play the game
-│   ├── Dockerfile           # Dockerfile for frontend services
-├── docker-compose.yml       
-├── .gitignore               
-├── .env                     #Stores gemini API key
-└── README.md                #Documentation
-\\\
+///
+.
+├── backend
+│   ├── Dockerfile
+│   ├── __pycache__
+│   │   ├── main.cpython-310.pyc
+│   │   ├── redis_client.cpython-310.pyc
+│   │   └── test.cpython-310.pyc
+│   ├── main.py
+│   ├── redis_client.py
+│   └── requirements.txt
+├── docker-compose.yml
+└── frontend
+    ├── Dockerfile
+    ├── frontend.py
+    └── requirements.txt
+///
+
 ## Set up Instructions
 1. `git clone https://github.com/Eros483/arnab-mandal-wasserstoff-AiInternTask.git`
 2. `cd arnab-mandal-wasserstoff-AiInternTask`
