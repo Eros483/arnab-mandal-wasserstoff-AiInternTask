@@ -9,8 +9,7 @@ from google.genai import types
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
+load_dotenv() #to load local environment variable for gemini api key
 client=genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 class LinkedList:
@@ -33,11 +32,12 @@ class LinkedList:
     
     def history(self):
         return self.redis.lrange(self.user_key, -5, -1)
+        #to print previous prompts
 
 user_sessions={}
 
 async def check_with_ai(seed: str, guess: str, persona: str)->bool:
-
+    #responsible for checking if user query beats seed
     persona_prompt={
         "You are the ultimate authority on the rules of a beats game. Given two elements determine if the first element beats the second. here are some estabilished rules for reference. Rock beats scissors, scissors beats paper, paper beats rock, water beats fire, electricity beats water, water does not beat electricity, electricity does not beat ground. The opposite pairs hold return the opposite value. For instance, electricity cannot beat ground. But ground beats electricity. Fire beats grass but grass does not beat fire. Consider the query, and respond only with a YES if it does beat it, or only with a NO. Return nothing else."
     }
@@ -100,7 +100,7 @@ async def check_with_ai(seed: str, guess: str, persona: str)->bool:
         system_instruction=persona_prompt),
         contents=prompt)'''
 
-profanity.load_censor_words()
+profanity.load_censor_words() #censors profanity
 
 app=FastAPI()
 
@@ -131,8 +131,8 @@ async def make_guess(request: GuessRequest):
     verdict=await check_with_ai(request.seed_word, request.guess, request.persona)
     custom_message=await personalize_response(request.seed_word, request.guess, verdict, request.persona)
 
-    r.incr(request.guess.lower())
-    count=int(r.get(request.guess.lower()) or 0)
+    r.incr(request.guess.lower())#loading redis client
+    count=int(r.get(request.guess.lower()) or 0) #incrementing count for succesful queries
 
     if verdict:
         return {
@@ -190,7 +190,7 @@ async def reset_user(user_id: str):
     return {"status": "global reset succesful"}
 
 async def personalize_response(seed: str, guess: str, verdict: str, persona: str)-> str:
-
+    #to generate responses based on type of persona agent chosen
     tone="cheery and fun" if persona=="cheery" else "serious and deadpan"
 
     if verdict:
