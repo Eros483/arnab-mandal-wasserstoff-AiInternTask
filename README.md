@@ -6,7 +6,7 @@
 "What-beats-rock" is an AI enhanced word game, where users attempt to beat rock in a conceptual or metaphorical sense. This is then evaluated by the genAI backend, providing AI-generated feedback, in a serious or cheery tone as chosen by user.
 
 ## Tech Stack
--**Frontend**: Streamlit
+-**Frontend**: Streamlit \n
 -**Backend**: FastAPI (Python)
 -**LLM**: Gemini
 -**Database**: Redis
