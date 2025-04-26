@@ -14,25 +14,6 @@
 
 ## Project Structure
 
-.
-├── backend
-│   ├── Dockerfile
-│   ├── __pycache__
-│   │   ├── main.cpython-310.pyc
-│   │   ├── redis_client.cpython-310.pyc
-│   │   └── test.cpython-310.pyc
-│   ├── main.py
-│   ├── redis_client.py
-│   └── requirements.txt
-├── docker-compose.yml
-└── frontend
-    ├── Dockerfile
-    ├── frontend.py
-    └── requirements.txt
-
-# Project tree
-
-.
  * [frontend](./frontend)
    * [Dockerfile](./frontend/Dockerfile)
    * [requirements.txt](./frontend/requirements.txt)
