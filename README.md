@@ -13,7 +13,7 @@
 -**Containerization**: Docker
 
 ## Project Structure
-what-beats-rock/
+\\\what-beats-rock/
 ├── backend/
 │   ├── main.py              # FastAPI powered app
 │   ├── requirements.txt     # backend dependencies
@@ -27,7 +27,7 @@ what-beats-rock/
 ├── .gitignore               
 ├── .env                     #Stores gemini API key
 └── README.md                #Documentation
-
+\\\
 ## Set up Instructions
 1. `git clone https://github.com/Eros483/arnab-mandal-wasserstoff-AiInternTask.git`
 2. `cd arnab-mandal-wasserstoff-AiInternTask`
